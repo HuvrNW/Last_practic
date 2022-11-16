@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <cmath>
 
-// Задание 3. Площадь треугольника.
+// Р—Р°РґР°РЅРёРµ 3. РџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°.
 struct triangle {
 	double a = 0;
 	double b = 0;
@@ -20,7 +20,7 @@ void fill_arr(T arr[], const int length, int begin, int end);
 template <typename T>
 void show_arr(T arr[], const int length);
 
-// Добавление нового элемента в конец массива.
+// Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† РјР°СЃСЃРёРІР°.
 template <typename T>
 void append(T*& arr, int length, T val) {
 	T* tmp = new T[length + 1];
@@ -31,11 +31,11 @@ void append(T*& arr, int length, T val) {
 	arr = tmp;
 }
 
-// Задача 1. Выделение памяти.
+// Р—Р°РґР°С‡Р° 1. Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё.
 template <typename T>
 void memory(T*& ptr, int length);
 
-// Задание 2. объединение массива и определение длины.
+// Р—Р°РґР°РЅРёРµ 2. РѕР±СЉРµРґРёРЅРµРЅРёРµ РјР°СЃСЃРёРІР° Рё РѕРїСЂРµРґРµР»РµРЅРёРµ РґР»РёРЅС‹.
 template <typename T>
 T* pos_arr_concat(T arr1[], T arr2[], const int length1, const int length2, int& var);
 
@@ -46,49 +46,49 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	int x;
 
-	// Задача 1. Выделение памяти.
+	// Р—Р°РґР°С‡Р° 1. Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё.
 	/*
-	std::cout << "\t\tЗадание 1.\n Выделение памяти.\n Введите кол-во элементов массива --> ";
+	std::cout << "\t\tР—Р°РґР°РЅРёРµ 1.\n Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё.\n Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° --> ";
 	std::cin >> x;
 	int* pArr1 = nullptr;
 
 	try {
 		memory(pArr1, x);
 		fill_arr(pArr1, x, 1, 101);
-		std::cout << " Итоговый массив --> ";
+		std::cout << " РС‚РѕРіРѕРІС‹Р№ РјР°СЃСЃРёРІ --> ";
 		show_arr(pArr1, x);
 		std::cout << "\n\n";
 		delete[] pArr1;
 	}
 	catch(const std::out_of_range& ex) {
-		std::cout << " Ошибка: " << ex.what() << "\n\n";
+		std::cout << " РћС€РёР±РєР°: " << ex.what() << "\n\n";
 	}
 	*/
 
-	// Задание 2. объединение массива и определение длины.
+	// Р—Р°РґР°РЅРёРµ 2. РѕР±СЉРµРґРёРЅРµРЅРёРµ РјР°СЃСЃРёРІР° Рё РѕРїСЂРµРґРµР»РµРЅРёРµ РґР»РёРЅС‹.
 	/*
-	std::cout << "\t\tЗадание 2.\n Объединение массива и определение длины.\n Массив 1 --> ";
+	std::cout << "\t\tР—Р°РґР°РЅРёРµ 2.\n РћР±СЉРµРґРёРЅРµРЅРёРµ РјР°СЃСЃРёРІР° Рё РѕРїСЂРµРґРµР»РµРЅРёРµ РґР»РёРЅС‹.\n РњР°СЃСЃРёРІ 1 --> ";
 	const int size1 = 7;
 	const int size2 = 5;
 	int arr1[size1], arr2[size2];
 	fill_arr(arr1, size1, -15, 16);
 	fill_arr(arr2, size2, -10, 11);
 	show_arr(arr1, size1);
-	std::cout << " Массив 2 --> ";
+	std::cout << " РњР°СЃСЃРёРІ 2 --> ";
 	show_arr(arr2, size2);
 
 	int* result_arr = pos_arr_concat(arr1, arr2, size1, size2, x);
-	std::cout << " Итоговый массив --> ";
+	std::cout << " РС‚РѕРіРѕРІС‹Р№ РјР°СЃСЃРёРІ --> ";
 	show_arr(result_arr, x);
 	std::cout << "\n\n";
 	delete[] result_arr;
 	*/
 
-	// Задание 3. Площадь треугольника.
-	std::cout << "\t\tЗадание 3.\n Площадь треугольника.\n Стороны треугольника --> ";
+	// Р—Р°РґР°РЅРёРµ 3. РџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°.
+	std::cout << "\t\tР—Р°РґР°РЅРёРµ 3.\n РџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°.\n РЎС‚РѕСЂРѕРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° --> ";
 	triangle ABC{ 4,6,8};
 	std::cout << ABC.a << ", " << ABC.b << ", " << ABC.c << ".\n";
-	std::cout << " Площадь треугольника --> " << sqr_tri(ABC) << "\n\n";
+	std::cout << " РџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° --> " << sqr_tri(ABC) << "\n\n";
 
 
 
@@ -110,15 +110,15 @@ void show_arr(T arr[], const int length) {
 }
 
 
-// Задача 1. Выделение памяти. 
+// Р—Р°РґР°С‡Р° 1. Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё. 
 template <typename T>
 void memory(T*& ptr, int length) {
 	if (length <= 0)
-		throw std::out_of_range("длина массива не может быть отрицательной или равной нулю");
+		throw std::out_of_range("РґР»РёРЅР° РјР°СЃСЃРёРІР° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕР№ РёР»Рё СЂР°РІРЅРѕР№ РЅСѓР»СЋ");
 	ptr = new T[length];
 }
 
-// Задание 2. объединение массива и определение длины.
+// Р—Р°РґР°РЅРёРµ 2. РѕР±СЉРµРґРёРЅРµРЅРёРµ РјР°СЃСЃРёРІР° Рё РѕРїСЂРµРґРµР»РµРЅРёРµ РґР»РёРЅС‹.
 template <typename T>
 T* pos_arr_concat(T arr1[], T arr2[], const int length1, const int length2, int& var) {
 	T* tmp_arr = new T[0];
@@ -137,7 +137,7 @@ T* pos_arr_concat(T arr1[], T arr2[], const int length1, const int length2, int&
 	return tmp_arr;
 }
 
-// Задание 3. Площадь треугольника.
+// Р—Р°РґР°РЅРёРµ 3. РџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°.
 double sqr_tri(triangle& T) {
 	double half_P = (T.a + T.b + T.c) / 2.0;
 	double S = sqrt(half_P * (half_P - T.a) * (half_P - T.b) * (half_P - T.c));
